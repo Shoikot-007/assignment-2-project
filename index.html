@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assignment 2</title>
   <link rel="stylesheet" href="styles/style.css">
+  <script src="https://kit.fontawesome.com/24e9a73f6c.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -125,6 +126,109 @@
         </div>
     </section>
 
+    <div class="bmi-text">
+      <h1 class="title">BMI Calculator</h1>
+      <p class="description">Our user-friendly BMI calculator allows you to easily estimate your body mass index with just a few clicks.</p>
+    </div>
+
+  </main>
+
+  <section class="bmi-section">
+    <div class="bmi-table-container">
+        <h1 id="bmi-calc-chart" class="title">BMI Chart</h1>
+        <table class="bmi-table">
+            <tr>
+                <th><span>BMI</span></th>
+                <th><span>Weight Status</span></th>
+            </tr>
+            <tr>
+                <td><span>Below 18.5</span></td>
+                <td><span>Underweight</span></td>
+            </tr>
+            <tr>
+                <td><span>18.5 - 24.9</span></td>
+                <td><span>Healthy</span></td>
+            </tr>
+            <tr>
+                <td><span>25.0 - 29.9</span></td>
+                <td><span>Overweight</span></td>
+            </tr>
+            <tr>
+                <td><span>30.0 and Above</span></td>
+                <td><span>Obese</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="calculate">
+        <div>
+            <h1 class="title">Calculate your BMI</h1>
+            <p class="description">Please accurately fill out the required fields with your weight and height to get the most precise BMI calculation.</p>
+        </div>
+        <div class="inputs">
+            <input type="text" placeholder="Height/cm">
+            <input type="text" placeholder="Weight/kg">
+            <input type="text" placeholder="Age">
+            <div class="select-container">
+
+                <select required name="sex" id="select-sex">
+                    <option value="" disabled selected hidden>Sex</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="select-container" id="activity">
+
+                <select required name="activity" value="Select an Activity factor">
+                    <option value="" disabled selected hidden>Select an activity factor</option>
+                    <option value="lazy">Lazy</option>
+                    <option value="lightlyactive">Lightly Active</option>
+                    <option value="moderatelyactive">Moderately Active</option>
+                </select>
+            </div>
+            
+        </div>
+        <div>
+
+            <button class="btn-secondary">Calculate</button>
+        </div>
+    </div>
+  </section>
+
+  <main id="main2">
+    <section class="team">
+      <div class="team-text-container">
+          <h1 class="title">Meet Our Team</h1>
+          <p class="description">Our team of dedicated and experienced fitness professionals is committed to helping you achieve your health and wellness goals.</p>
+      </div>
+
+      <div class="trainers">
+          <div id="trainer1">
+              <h4>Jerome Bell</h4>
+              <span class="description">Trainer</span>
+          </div>
+          <div id="trainer2">
+              <h4>Cameron Williamson</h4>
+              <span class="description">Trainer</span>
+          </div>
+          <div id="trainer3">
+              <h4>Darrell Steward</h4>
+              <span class="description">Trainer</span>
+          </div>
+          <div id="trainer4">
+              <h4>Dianne Russell</h4>
+              <span class="description">Trainer</span>
+          </div>
+          <div id="trainer5">
+              <h4>Cody Fisher</h4>
+              <span class="description">Trainer</span>
+          </div>
+          <div id="trainer6">
+              <h4>Theresa Webb</h4>
+              <span class="description">Trainer</span>
+          </div>
+      </div>
+    </section>
   </main>
 
 </body>

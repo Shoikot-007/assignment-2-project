@@ -358,6 +358,224 @@ nav div button:nth-child(4){
 }
 
 
+/* bmi section */
+
+.bmi-text {
+  max-width: 670px;
+  margin: 5.5rem auto;
+}
+
+.bmi-section h1 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  margin: 0;
+  text-wrap: nowrap;
+}
+
+.bmi-section {
+  height: 100%; 
+  background: rgb(34, 34, 34);
+  padding: 3.2rem 11rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 11rem;
+  margin-bottom: 7rem;
+}
+
+#bmi-calc-chart {
+  margin-bottom: 3.2rem;
+  font-size: 1.75rem;
+  text-wrap: nowrap;
+}
+
+.bmi-table {
+  width: 310px;
+}
+
+.bmi-table, .bmi-table th, .bmi-table td {
+  border: 1px solid;
+  border-collapse: collapse;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.1);
+  text-align: left;
+  padding: 0.9rem 1rem;
+}
+
+.bmi-table th {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.bmi-table td>span {
+  color: rgb(255, 255, 255, 0.5);
+}
+
+
+.calculate {
+  width: 100%;
+  max-width: 577px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.calculate .description {
+  margin-bottom: 0;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.inputs > input, .inputs select {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1.25rem;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+}
+
+.inputs > input::placeholder, .inputs select:invalid {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+select > option {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+}
+
+#activity {
+  grid-column: span 2;
+}
+
+
+.select-container {
+  position: relative;
+}
+
+.select-container select {
+  appearance: none;
+}
+
+.select-container:after {
+  content: "\f078";
+  font-family: "FontAwesome";
+  position: absolute;
+  right: 1.4rem;
+  top: 1rem;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+
+/* trainers */
+
+.team-text-container{
+  max-width: 670px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.team{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1060px;
+}
+
+.trainers{
+  background: rgb(34, 34, 34);
+  padding: 1rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.trainers h4, .trainers span{
+  margin: 0;
+  z-index: 1;
+}
+
+.trainers h4{
+  font-size: 1.25rem;
+}
+.trainers span{
+  font-size: 0.85rem;
+  color: rgb(255, 255, 255, 0.5)
+}
+
+/* trainer images */
+.trainers > div {
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  height: 272px;
+  cursor: pointer;
+}
+
+.trainers > div::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 1rem;
+  transition: transform 0.15s ease-in;
+}
+
+#trainer1::before {
+  background-image: url(../images/trainer1.png);
+  background-position: top;
+}
+
+.trainers > div:hover::before {
+  transform: scale(105%);
+}
+
+#trainer2::before {
+  background-image: url(../images/trainer2.png);
+}
+
+#trainer3::before {
+  background-image: url(../images/trainer3.png);
+  background-position: top;
+}
+
+#trainer4::before {
+  background-image: url(../images/trainer4.png);
+}
+
+#trainer5::before {
+  background-image: url(../images/trainer5.png);
+}
+
+#trainer6::before {
+  background-image: url(../images/trainer6.png);
+}
+
+
 /* small device */
 
 @media (max-width: 576px) {
@@ -477,8 +695,8 @@ nav div button:nth-child(4){
 
   .habit-cards,
     .extra-mile > div {
-       flex-direction: column;
-       align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     .habits-section {
@@ -508,4 +726,32 @@ nav div button:nth-child(4){
         width: 100%;
         max-width: 353px;
     }
+
+
+    .bmi-text {
+        margin: 4rem 0 2rem 0;
+    }
+
+    .bmi-section {
+        gap: 2.5rem;
+        flex-direction: column;
+        padding: 2.5rem 1.25rem;
+    }
+
+    #bmi-calc-chart, .bmi-section h1 {
+        font-size: 1rem;
+        margin: 0;
+    }
+    #bmi-calc-chart {
+        margin-bottom: 1.5rem;
+    }
+  
+    .bmi-section {
+        margin-bottom: 5rem;
+    }
+
+    .trainers{
+        display: flex;
+        flex-direction: column;
+  }
 }
