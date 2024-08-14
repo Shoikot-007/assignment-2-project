@@ -345,6 +345,10 @@ nav div button:nth-child(4) {
   margin-bottom: 2rem;
 }
 
+.extra-mile {
+  margin-bottom: 0;
+}
+
 .extra-mile .extra-mile-run {
   width: 100%;
   max-width: 366px;
@@ -516,6 +520,89 @@ select > option {
   color: rgb(255, 255, 255, 0.5)
 }
 
+
+/* creative section */
+
+.creative {
+  margin-bottom: 7rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#video-container {
+  border: 2px solid rgb(54,54,54);
+  overflow: hidden;
+  border-radius: 1rem;
+  height: 500px;
+  display: flex;
+  margin: 2rem 0;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+#select-plan {
+  margin: 1rem 0 1.5rem 0;
+}
+
+#select-plan h2 {
+  font-size: 1.6rem;
+}
+
+.bmi-card {
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 320px;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease-in;
+  max-width: 240px;
+  min-width: 230px;
+}
+
+.bmi-card:hover {
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+.bmi-card img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.15s ease-in;
+}
+
+.bmi-card-img-container {
+  height: 100%;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.bmi-card:hover .bmi-card-img-container img {
+  transform: scale(110%);
+}
+
+
+.bmi-card-texts {
+  padding: 0 1rem;
+}
+
+.bmi-card p {
+  text-align: left;
+}
+
+#needDoctor img {
+  transform: scale(110%);
+  transition: transform 0.15s ease-in;
+}
+
+#needDoctor:hover .bmi-card-img-container img {
+  transform: scale(120%);
+}
+
 /* trainer images */
 .trainers > div {
   border-radius: 1rem;
@@ -579,7 +666,7 @@ select > option {
 /* footer section */
 .footer {
   background: rgb(34, 34, 34);
-  margin-top: 4rem;
+  margin-top: 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -761,7 +848,7 @@ select > option {
 
 
   .habit-cards,
-    .extra-mile > div {
+  .extra-mile > div {
         flex-direction: column;
         align-items: center;
     }
@@ -821,7 +908,7 @@ select > option {
     main, .footer-content-container{
         width: 100%;
         max-width: 353px;
-  }
+    }
     .footer-content-container{
         flex-direction: column;
         gap: 1rem;
@@ -848,5 +935,5 @@ select > option {
     .get-started ul > li{
         font-size: 1.45rem;
     }
-    
+
 }
